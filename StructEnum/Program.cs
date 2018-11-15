@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace StructEnum
 {
     enum WorkerPosition
@@ -32,16 +31,18 @@ namespace StructEnum
                 Console.WriteLine("You can not get *Bonus*");
                 Console.ForegroundColor = ConsoleColor.White;
             }
-
-
         }
     }
     struct Accauntant
     {
-
+        /// <summary>
+        /// This function check worker can get bouns during the month or not ? 
+        /// </summary>
+        /// <param name="worker"></param>
+        /// <param name="hours"></param>
+        /// <returns></returns>
         public bool AskForBonus(string worker, int hours)
         {
-
             var a = worker.Trim();
             var b = a.ToLower();
             if (b == "developer" && hours >= (int)WorkerPosition.Developer)
